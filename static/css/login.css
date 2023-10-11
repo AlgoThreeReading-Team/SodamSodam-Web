@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+  }
+  body,
+  main,
+  div {
+    margin: 0;
+    padding: 0;
+  }
+  ol,
+  ul,
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  main {
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* section {
+    width: 85rem;
+    height: 50rem;
+    margin: auto;
+  
+    margin-top: 5.3rem;
+  
+    position: relative;
+  } */
+  button {
+    cursor: pointer;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+.section { 
+	overflow:hidden;
+}
+.section { 
+	background-color:rgba(242.00000077486038, 243.00000071525574, 245.00000059604645, 1);
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+.BackgroundWrap { 
+	width:600px;
+	height:1080px;
+	position:absolute;
+	left:660px;
+	top:0px;
+}
+.MainWrap { 
+	background-color:rgba(255, 255, 255, 1);
+	width:552px;
+	height:935px;
+	position:absolute;
+	left:-15%;
+	top:0px;
+}
+.TopBarWrap { 
+	width:552px;
+	height:90px;
+	position:absolute;
+	left:0px;
+	top:-3px;
+}
+.TopBar { 
+	background-color:rgba(255, 255, 255, 1);
+	width:552px;
+	height:78px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.TopBarText { 
+	width:282px;
+	height:63px;
+	position:absolute;
+	left:25px;
+	top:9px;
+}
+.BackBtnWrap { 
+	width:97px;
+	height:63px;
+	position:absolute;
+	left:15px;
+	top:0px;
+}
+
+.BackBtnText { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:97px;
+	height:63px;
+	position:absolute;
+	left:0px;
+	top:10px;
+	border-radius:20px;
+    text-align: center;
+    display: flex; /* 텍스트를 수직 가운데 정렬하기 위해 Flexbox. */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    font-size: 20px;
+    object-fit: cover;
+    border: none; 
+}
+.LoginText { 
+	color:rgba(0, 0, 0, 1);
+	width:85px;
+	height:30px;
+	position:absolute;
+	left:213px;
+	top:25px;
+	font-family:Inter;
+	text-align:left;
+	font-size:25px;
+	letter-spacing:0;
+}
+.InputIdWrap { 
+	width:473px;
+	height:72px;
+	position:absolute;
+	left:39px;
+	top:146px;
+}
+.id { 
+	background-color:rgba(255, 255, 255, 1);
+	width:473px;
+	height:72px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+    border:1px solid rgba(0, 0, 0, 1);
+}
+
+.password { 
+	background-color:rgba(255, 255, 255, 1);
+	width:473px;
+	height:72px;
+	position:absolute;
+	left:39px;
+	top:254px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-right-radius:20px;border:1px solid rgba(0, 0, 0, 1);
+}
+
+.LoginBtnWrap { 
+	width:473px;
+	height:72px;
+	position:absolute;
+	left:39px;
+	top:362px;
+}
+
+.LoginBtnText { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:473px;
+	height:72px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+    text-align: center;
+    display: flex; /* 텍스트를 수직 가운데 정렬하기 위해 Flexbox. */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    font-size: 23px;
+    object-fit: cover;
+    border: none; 
+}
+
+.id::placeholder,
+.password::placeholder {
+  font-size: 20px; /* 원하는 글자 크기로 조정합니다. */
+  /* 원하는 위치로 조정합니다. */
+  /* 예를 들어, top 속성을 사용하여 위쪽으로 이동시킬 수 있습니다. */
+}
+
+.id,
+.password{
+    text-indent: 40px; /* 입력 커서 시작 위치를 조절합니다. */
+    font-size: 20px;
+}

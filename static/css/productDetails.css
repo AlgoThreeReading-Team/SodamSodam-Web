@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+  }
+  body,
+  main,
+  div {
+    margin: 0;
+    padding: 0;
+  }
+  ol,
+  ul,
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+	background-color:rgba(242.00000077486038, 243.00000071525574, 245.00000059604645, 1);
+  }
+  main {
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* section {
+    width: 85rem;
+    height: 50rem;
+    margin: auto;
+  
+    margin-top: 5.3rem;
+  
+    position: relative;
+  } */
+  button {
+    cursor: pointer;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  
+/* .Section { 
+	overflow:hidden;
+} */
+.Section { 
+	background-color:rgba(242.00000077486038, 243.00000071525574, 245.00000059604645, 1);
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+.BackgroundWrap { 
+	width:600px;
+	height:1080px;
+	position:absolute;
+	left:660px;
+	top:0px;
+}
+.MainWrap { 
+	background-color:rgba(255, 255, 255, 1);
+	width:552px;
+	height:900px;
+	position:absolute;
+	left:-15%;
+	top:0px;
+}
+.TopbarSection { 
+	width:552px;
+	height:78px;
+	position:fixed;
+	left:570px;
+	top:-3px;
+	background-color: white;
+	z-index: 9999;
+}
+
+.TopbarWrap { 
+	width:343px;
+	height:63px;
+	position:absolute;
+	left:25px;
+	top:8.999998092651367px;
+}
+.BackbtnWrap { 
+	width:97px;
+	height:63px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+.BackBtn { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:97px;
+	height:63px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-radius:20px;
+	 text-align: center;
+    display: flex; /* 텍스트를 수직 가운데 정렬하기 위해 Flexbox. */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    font-size: 20px;
+    object-fit: cover;
+    border: none; 
+}
+.TopbarTitle { 
+	color:rgba(0, 0, 0, 1);
+	width:200px;
+	height:16.153844833374023px;
+	position:absolute;
+	left:170px;
+	top:21.000001907348633px;
+	font-family:Inter;
+	text-align:left;
+	font-size:25px;
+	letter-spacing:0;
+	object-fit: cover;
+    display: flex; /* 텍스트를 수직 가운데 정렬하기 위해 Flexbox. */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+}
+.ImageWrap { 
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	width:552px;
+	height:308px;
+	position:absolute;
+	left:0px;
+	top:75px;
+}
+.ProductTitle { 
+	color:rgba(0, 0, 0, 1);
+	/* width:333px; */
+	height:30px;
+	position:absolute;
+	left:25px;
+	top:410px;
+	font-family:Inter;
+	text-align:left;
+	font-size:25px;
+	letter-spacing:0;
+	object-fit: cover;
+}
+.ProductPrice { 
+	color:rgba(0, 0, 0, 1);
+	width:87px;
+	height:28px;
+	position:absolute;
+	left:91px;
+	top:452px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.DeliveryCharge { 
+	color:rgba(0, 0, 0, 1);
+	/* width:85px; */
+	height:28px;
+	position:absolute;
+	left:111px;
+	top:567px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+	object-fit: cover;
+}
+.ProductExplainWrap { 
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:211px;
+	top:744px;
+}
+
+.ProductExplain { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+	text-align: center;
+    display: flex; /* 텍스트를 수직 가운데 정렬하기 위해 Flexbox. */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    font-size: 20px;
+    object-fit: cover;
+    border: none; 
+}
+.ReviewWrap { 
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:390px;
+	top:744px;
+}
+.Review { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+	text-align: center;
+    display: flex; /* 텍스트를 수직 가운데 정렬하기 위해 Flexbox. */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    font-size: 20px;
+    object-fit: cover;
+    border: none; 
+}
+
+.RequiredInfoWrap { 
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:29px;
+	top:744px;
+}
+.RequiredInfo { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+	text-align: center;
+    display: flex; /* 텍스트를 수직 가운데 정렬하기 위해 Flexbox. */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    font-size: 20px;
+    object-fit: cover;
+    border: none; 
+}
+
+/* iframe */
+.InfoSection { 
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	width:552px;
+	height:100%;
+	position:absolute;
+	/* left:26px; */
+	top:857px;
+}
+.PriceText { 
+	color:rgba(0, 0, 0, 1);
+	/* width:55px; */
+	height:28px;
+	position:absolute;
+	left:25px;
+	top:451px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+	object-fit: cover;
+}
+.StarText { 
+	color:rgba(0, 0, 0, 1);
+	/* width:55px; */
+	height:28px;
+	position:absolute;
+	left:25px;
+	top:489px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+	object-fit: cover;
+}
+.Star { 
+	color:rgba(0, 0, 0, 1);
+	/* width:121px; */
+	height:28px;
+	position:absolute;
+	left:88px;
+	top:488px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+	object-fit: cover;
+}
+.ReviewText { 
+	color:rgba(0, 0, 0, 1);
+	/* width:76px; */
+	height:28px;
+	position:absolute;
+	left:25px;
+	top:528px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+	object-fit: cover;
+}
+.ReviewCount { 
+	color:rgba(0, 0, 0, 1);
+	width:90px;
+	height:28px;
+	position:absolute;
+	left:113px;
+	top:529px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.DeliveryChargeText { 
+	color:rgba(0, 0, 0, 1);
+	/* width:76px; */
+	height:28px;
+	position:absolute;
+	left:25px;
+	top:567px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+	object-fit: cover;
+}
+.DeliveryDateText { 
+	color:rgba(0, 0, 0, 1);
+	/* width:97px; */
+	height:28px;
+	position:absolute;
+	left:25px;
+	top:607px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+	object-fit: cover;
+}
+.DeliveryDate { 
+	color:rgba(0, 0, 0, 1);
+	/* width:337px; */
+	height:28px;
+	position:absolute;
+	left:132px;
+	top:608px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+	object-fit: cover;
+}
+.OptionbarWrap { 
+	width:491px;
+	height:39px;
+	position:absolute;
+	left:29px;
+	top:665px;
+}
+
+.Optionbar { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:491px;
+	height:39px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+    display: flex; /* 텍스트를 수직 가운데 정렬하기 위해 Flexbox. */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+}
+.OptionToggle { 
+	background-color:rgba(0, 0, 0, 1);
+	width:21.650634765625px;
+	height:16.5px;
+	position:absolute;
+	left:479.6746826171875px;
+	top:694px;
+}

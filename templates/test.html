@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>음성 인식 예제</title>
+</head>
+<body>
+  <button id="startButton">음성 인식 시작</button>
+  <div id="resultDiv"></div>
+
+  <script>
+   const startButton = document.getElementById("startButton");
+    const resultDiv = document.getElementById("resultDiv");
+    let recognition;
+
+// 음성 인식을 초기화하는 함수
+    function initializeSpeechRecognition() {
+     recognition = new webkitSpeechRecognition(); // 브라우저 호환성을 위해 webkitSpeechRecognition 사용
+     recognition.lang = 'ko-KR'; // 언어 설정을 한국어로 변경
+ 
+    recognition.onresult = function(event) {
+        const result = event.results[0][0].transcript;
+        resultDiv.textContent = "인식된 텍스트: " + result;
+     };
+
+    recognition.onerror = function(event) {
+        console.error("음성 인식 오류:", event.error);
+    };
+
+    recognition.onend = function() {
+        console.log("음성 인식 중지");
+        startButton.disabled = false;
+    };
+}
+
+// 음성 인식을 시작하는 함수
+function startSpeechRecognition() {
+  initializeSpeechRecognition();
+  recognition.start();
+  startButton.disabled = true;
+}
+
+// 버튼 클릭 시 음성 인식 시작
+    startButton.addEventListener("click", startSpeechRecognition);
+  </script>
+</body>
+</html>

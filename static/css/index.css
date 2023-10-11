@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+  }
+  body,
+  main,
+  div {
+    margin: 0;
+    padding: 0;
+  }
+  ol,
+  ul,
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  main {
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* section {
+    width: 85rem;
+    height: 50rem;
+    margin: auto;
+  
+    margin-top: 5.3rem;
+  
+    position: relative;
+  } */
+  button {
+    cursor: pointer;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+.Section { 
+	overflow:hidden;
+}
+.Section { 
+	background-color:rgba(242.00000077486038, 243.00000071525574, 245.00000059604645, 1);
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+.BackgroundWrap { 
+	width:600px;
+	height:1080px;
+	position:absolute;
+	left:660px;
+	top:0px;
+}
+.TopBarWrap { 
+	background-color:rgba(255, 255, 255, 1);
+	width:552px;
+	height:44px;
+	position:absolute;
+	left:-15%;
+	top:0px;
+}
+.MainWrap { 
+	background-color:rgba(255, 255, 255, 1);
+	width:552px;
+	height:900px;
+	position:absolute;
+	left:-15%;
+	top:44px;
+}
+/* .e2_23 { 
+	width:164.5399932861328px;
+	height:44px;
+	position:absolute;
+	left:371.6600036621094px;
+	top:954px;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+} */
+.LoginBtnWrap { 
+	width:431px;
+	height:83px;
+	position:absolute;
+	left:67px;
+	top:706.5px;
+}
+.LoginBtn { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 1);
+	width:431px;
+	height:83px;
+	position:absolute;
+	left:0px;
+	top:-80px;
+	border-radius:20px;
+    text-align: center;
+    display: flex; /* 텍스트를 수직 가운데 정렬하기 위해 Flexbox를 사용합니다. */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    color: white;
+    font-size: 30px;
+    object-fit: cover;
+    border: none; /* 테두리를 없앱니다. */
+}
+
+.EyeShoppingWrap { 
+	width:431px;
+	height:83px;
+	position:absolute;
+	left:68px;
+	top:837.5px;
+}
+.EyeShoppingWrapBtn { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 1);
+	width:431px;
+	height:83px;
+	position:absolute;
+	left:0px;
+	top:-80px;
+	border-radius:20px;
+    text-align: center;
+    display: flex; /* 텍스트를 수직 가운데 정렬하기 위해 Flexbox를 사용합니다. */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    color: white;
+    font-size: 30px;
+    object-fit: cover;
+    border: none; /* 테두리를 없앱니다. */
+}
+
+.Logo { 
+	width:348px;
+	height:277px;
+	position:absolute;
+	left:110px;
+	top:99.5px;
+}
+.nothing { 
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	width:348px;
+	height:277px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.nothinglogo { 
+	color:rgba(0, 0, 0, 1);
+	width:44px;
+	height:66px;
+	position:absolute;
+	left:152px;
+	top:106px;
+	font-family:Inter;
+	text-align:left;
+	font-size:21.428571701049805px;
+	letter-spacing:0;
+}

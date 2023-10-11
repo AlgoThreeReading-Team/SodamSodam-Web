@@ -1,0 +1,590 @@
+* {
+    box-sizing: border-box;
+  }
+  body,
+  main,
+  div {
+    margin: 0;
+    padding: 0;
+  }
+  ol,
+  ul,
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+	background-color: rgba(242.00000077486038, 243.00000071525574, 245.00000059604645, 1);
+  }
+  main {
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* section {
+    width: 85rem;
+    height: 50rem;
+    margin: auto;
+  
+    margin-top: 5.3rem;
+  
+    position: relative;
+  } */
+  button {
+    cursor: pointer;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+
+.e5_103 { 
+	background-color:rgba(242.00000077486038, 243.00000071525574, 245.00000059604645, 1);
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+.e5_104 { 
+	width:600px;
+	height:1080px;
+	position:absolute;
+	left:660px;
+	top:0px;
+}
+.e5_108 { 
+	background-color:rgba(255, 255, 255, 1);
+	width:552px;
+	height:100%;
+	position:absolute;
+	left:-20.5%;
+	top:0px;
+}
+.e5_138 { 
+	width:460px;
+	height:709px;
+	position:absolute;
+	left:46px;
+	top:274px;
+}
+.e5_139 { 
+	width:460px;
+	height:204px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.e5_151 { 
+	width:398px;
+	height:160.99996948242188px;
+	position:absolute;
+	left:29px;
+	top:25.000030517578125px;
+}
+.e5_142 { 
+	background-color:rgba(0, 0, 0, 1);
+	width:125px;
+	height:111px;
+	position:absolute;
+	left:0px;
+	top:47px;
+}
+.e5_148 { 
+	color:rgba(0, 0, 0, 1);
+	width:166px;
+	height:28px;
+	position:absolute;
+	left:232px;
+	top:132.99996948242188px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e5_147 { 
+	color:rgba(0, 0, 0, 1);
+	width:76px;
+	height:28px;
+	position:absolute;
+	left:144px;
+	top:132px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e5_146 { 
+	color:rgba(0, 0, 0, 1);
+	width:121px;
+	height:28px;
+	position:absolute;
+	left:210px;
+	top:90px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e5_145 { 
+	color:rgba(0, 0, 0, 1);
+	width:55px;
+	height:28px;
+	position:absolute;
+	left:145px;
+	top:90.5px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e5_144 { 
+	color:rgba(0, 0, 0, 1);
+	width:87px;
+	height:28px;
+	position:absolute;
+	left:214px;
+	top:47px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e5_143 { 
+	color:rgba(0, 0, 0, 1);
+	width:55px;
+	height:28px;
+	position:absolute;
+	left:146px;
+	top:47px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e5_141 { 
+	color:rgba(0, 0, 0, 1);
+	width:306px;
+	height:28px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e5_133 { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:460px;
+	height:204px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-radius:20px;
+}
+.e26_50 { 
+	width:460px;
+	height:459px;
+	position:absolute;
+	left:0px;
+	top:250px;
+}
+.e26_51 { 
+	width:398px;
+	height:160.99996948242188px;
+	position:absolute;
+	left:29px;
+	top:25.000030517578125px;
+}
+.e26_52 { 
+	background-color:rgba(0, 0, 0, 1);
+	width:125px;
+	height:111px;
+	position:absolute;
+	left:0px;
+	top:47px;
+}
+.e26_53 { 
+	color:rgba(0, 0, 0, 1);
+	width:166px;
+	height:28px;
+	position:absolute;
+	left:232px;
+	top:132.99996948242188px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_54 { 
+	color:rgba(0, 0, 0, 1);
+	width:76px;
+	height:28px;
+	position:absolute;
+	left:144px;
+	top:132px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_55 { 
+	color:rgba(0, 0, 0, 1);
+	width:121px;
+	height:28px;
+	position:absolute;
+	left:210px;
+	top:90px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_56 { 
+	color:rgba(0, 0, 0, 1);
+	width:55px;
+	height:28px;
+	position:absolute;
+	left:145px;
+	top:90.5px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_57 { 
+	color:rgba(0, 0, 0, 1);
+	width:87px;
+	height:28px;
+	position:absolute;
+	left:214px;
+	top:47px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_58 { 
+	color:rgba(0, 0, 0, 1);
+	width:55px;
+	height:28px;
+	position:absolute;
+	left:146px;
+	top:47px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_59 { 
+	color:rgba(0, 0, 0, 1);
+	width:306px;
+	height:28px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_60 { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:460px;
+	height:204px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-radius:20px;
+}
+.e26_61 { 
+	width:460px;
+	height:204px;
+	position:absolute;
+	left:0px;
+	top:255px;
+}
+.e26_62 { 
+	width:398px;
+	height:160.99996948242188px;
+	position:absolute;
+	left:29px;
+	top:25.000030517578125px;
+}
+.e26_63 { 
+	background-color:rgba(0, 0, 0, 1);
+	width:125px;
+	height:111px;
+	position:absolute;
+	left:0px;
+	top:47px;
+}
+.e26_64 { 
+	color:rgba(0, 0, 0, 1);
+	width:166px;
+	height:28px;
+	position:absolute;
+	left:232px;
+	top:132.99996948242188px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_65 { 
+	color:rgba(0, 0, 0, 1);
+	width:76px;
+	height:28px;
+	position:absolute;
+	left:144px;
+	top:132px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_66 { 
+	color:rgba(0, 0, 0, 1);
+	width:121px;
+	height:28px;
+	position:absolute;
+	left:210px;
+	top:90px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_67 { 
+	color:rgba(0, 0, 0, 1);
+	width:55px;
+	height:28px;
+	position:absolute;
+	left:145px;
+	top:90.5px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_68 { 
+	color:rgba(0, 0, 0, 1);
+	width:87px;
+	height:28px;
+	position:absolute;
+	left:214px;
+	top:47px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_69 { 
+	color:rgba(0, 0, 0, 1);
+	width:55px;
+	height:28px;
+	position:absolute;
+	left:146px;
+	top:47px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_70 { 
+	color:rgba(0, 0, 0, 1);
+	width:306px;
+	height:28px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	font-family:Inter;
+	text-align:left;
+	font-size:23px;
+	letter-spacing:0;
+}
+.e26_71 { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:460px;
+	height:204px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-radius:20px;
+}
+.e5_124 { 
+	background-color:rgba(255, 255, 255, 1);
+	width:346px;
+	height:66px;
+	position:absolute;
+	left:160px;
+	top:32px;
+	border-radius:20px;
+}
+.e5_124 { 
+	border:5px solid rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 1);
+}
+.e5_135 { 
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:46px;
+	top:136.5px;
+}
+.e5_125 { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+}
+.e5_128 { 
+	color:rgba(0, 0, 0, 1);
+	width:69px;
+	height:60px;
+	position:absolute;
+	left:31px;
+	top:7.5px;
+	font-family:Inter;
+	text-align:left;
+	font-size:25px;
+	letter-spacing:0;
+}
+.e5_136 { 
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:214px;
+	top:136.5px;
+}
+.e5_131 { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+}
+.e5_129 { 
+	color:rgba(0, 0, 0, 1);
+	width:69px;
+	height:60px;
+	position:absolute;
+	left:31px;
+	top:7.5px;
+	font-family:Inter;
+	text-align:left;
+	font-size:25px;
+	letter-spacing:0;
+}
+.e5_137 { 
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:376px;
+	top:135.5px;
+}
+.e5_132 { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:130px;
+	height:74px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+}
+.e5_130 { 
+	color:rgba(0, 0, 0, 1);
+	width:69px;
+	height:60px;
+	position:absolute;
+	left:31px;
+	top:7.5px;
+	font-family:Inter;
+	text-align:left;
+	font-size:25px;
+	letter-spacing:0;
+}
+.e5_187 { 
+	width:97px;
+	height:66px;
+	position:absolute;
+	left:46px;
+	top:33px;
+}
+.e5_186 { 
+	color:rgba(0, 0, 0, 1);
+	width:46px;
+	height:60px;
+	position:absolute;
+	left:26px;
+	top:3px;
+	font-family:Inter;
+	text-align:left;
+	font-size:25px;
+	letter-spacing:0;
+}
+.e5_185 { 
+	background-color:rgba(118.21446105837822, 38.92291501164436, 166.81249290704727, 0.33000001311302185);
+	width:97px;
+	height:66px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+}
+.e5_188 { 
+	color:rgba(0, 0, 0, 1);
+	width:92px;
+	height:30px;
+	position:absolute;
+	left:184px;
+	top:50px;
+	font-family:Inter;
+	text-align:left;
+	font-size:25px;
+	letter-spacing:0;
+}
+.e25_2 { 
+	width:100px;
+	height:100px;
+	position:absolute;
+	left:910px;
+	top:1080px;
+}
+
+.TopBar {
+	background-color: white; /* 배경색을 빨간색으로 지정 */
+	position: fixed; /* 상단바를 화면에 고정 */
+	top: 0; /* 화면 맨 위에 위치 */
+	z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
+	width: 33.5%;
+    height: 24%;
+  }
