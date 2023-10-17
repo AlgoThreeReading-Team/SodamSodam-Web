@@ -31,7 +31,6 @@ const createChatLi = (message, className) => {
 
 const generateResponse = (chatElement) => {
   const API_URL = "http://testdongho.kro.kr:5000/query";
-  //const messageElement = chatElement.querySelector("p");
 
   // API 요청에 대한 속성과 메세지 정의
   const requestOptions = {
@@ -40,7 +39,7 @@ const generateResponse = (chatElement) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      query: "청소기 추천해줘",
+      query: userMessage, // 사용자가 입력한 메시지를 보냅니다.
     }),
   };
 
@@ -49,11 +48,19 @@ const generateResponse = (chatElement) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      messageElement.textContent = data.choices[0].message.content.trim();
+
+      // 서버 응답에서 추출한 answer 메시지
+      const responseMessage = data.answer;
+
+      // messageElement에 응답 메시지를 설정
+      chatElement.querySelector("p").textContent = responseMessage.trim();
+
+      // 화면 스크롤 조정
+      chatbox.scrollTo(0, chatbox.scrollHeight);
     })
     .catch(() => {
-      messageElement.classList.add("error");
-      messageElement.textContent = "다시 입력해주세요.";
+      chatElement.querySelector("p").classList.add("error");
+      chatElement.querySelector("p").textContent = "다시 입력해주세요.";
     })
     .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 };
@@ -76,7 +83,7 @@ const handleChat = () => {
     chatbox.appendChild(incomingChatLi);
     chatbox.scrollTo(0, chatbox.scrollHeight);
     generateResponse(incomingChatLi);
-  }, 600);
+  });
 };
 
 chatInput.addEventListener("input", () => {
