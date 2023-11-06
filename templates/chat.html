@@ -65,8 +65,19 @@
         };
       }
 
-      // 클릭 이벤트 리스너 추가
+      // 클릭 이벤트 핸들링
       document.body.addEventListener("click", function (event) {
+        if (!recognition) {
+          // recognition이 초기화되지 않았으면 초기화
+          initializeSpeechRecognition();
+        }
+
+        // 음성 인식 시작
+        recognition.start();
+      });
+
+      // 터치 이벤트 핸들링
+      document.body.addEventListener("touchstart", function (event) {
         if (!recognition) {
           // recognition이 초기화되지 않았으면 초기화
           initializeSpeechRecognition();
