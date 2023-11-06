@@ -39,7 +39,7 @@ const generateResponse = (chatElement) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      query: userMessage, // 사용자가 입력한 메시지를 보냅니다.
+      query: userMessage, // 사용자가 입력한 메시지를 보냄
     }),
   };
 
