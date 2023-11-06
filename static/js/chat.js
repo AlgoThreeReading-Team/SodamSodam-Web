@@ -29,7 +29,7 @@ const createChatLi = (message, className) => {
   return chatLi; // 채팅 <li>요소 반환
 };
 
-const generateResponse = (chatElement) => {
+const generateResponse = () => {
   const API_URL = "http://testdongho.kro.kr:5000/query";
 
   // API 요청에 대한 속성과 메세지 정의
@@ -49,20 +49,21 @@ const generateResponse = (chatElement) => {
     .then((data) => {
       console.log(data);
 
-      // 서버 응답에서 추출한 answer 메시지
       const responseMessage = data.answer;
 
-      // messageElement에 응답 메시지를 설정
-      chatElement.querySelector("p").textContent = responseMessage.trim();
-
+      // 서버 응답에서 answer 메시지가 존재하는 경우에만 응답 메시지를 추가
+      if (responseMessage) {
+        const responseLi = createChatLi(responseMessage, "incoming");
+        chatbox.appendChild(responseLi);
+      }
       // 화면 스크롤 조정
       chatbox.scrollTo(0, chatbox.scrollHeight);
     })
     .catch(() => {
-      chatElement.querySelector("p").classList.add("error");
-      chatElement.querySelector("p").textContent = "다시 입력해주세요.";
-    })
-    .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
+      const errorLi = createChatLi("다시 입력해주세요.", "incoming error");
+      chatbox.appendChild(errorLi);
+      chatbox.scrollTo(0, chatbox.scrollHeight);
+    });
 };
 
 const handleChat = () => {
