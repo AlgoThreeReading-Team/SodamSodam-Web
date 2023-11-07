@@ -46,12 +46,19 @@ function greetUser() {
   }
 }
 
-// "네, 말씀하세요."라는 TTS 음성 메시지를 출력하는 함수
 function speakAskForInput() {
-  const message = "네, 말씀하세요.";
+  const message = "네, 네, 말씀하세요.";
+
   if (synth && message) {
+    const chatbox = document.querySelector(".chatbox");
+
+    // Create a new incoming chat message similar to the server response
+    const newIncomingLi = createChatLi("네, 말씀하세요.", "incoming");
+    chatbox.appendChild(newIncomingLi);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+
     const utterance = new SpeechSynthesisUtterance(message);
-    utterance.rate = 1.8; // Adjust the rate to make it faster (e.g., 1.5 for 1.5x speed)
+    utterance.rate = 1.8;
     synth.speak(utterance);
   }
 }
@@ -61,6 +68,7 @@ function speakAskForInput() {
 function speakResponse(message) {
   if (synth && message) {
     const utterance = new SpeechSynthesisUtterance(message);
+    utterance.rate = 1.7; 
     synth.speak(utterance);
   }
 }
@@ -184,3 +192,4 @@ document.body.addEventListener("click", () => {
     event.preventDefault();
   }
 });
+

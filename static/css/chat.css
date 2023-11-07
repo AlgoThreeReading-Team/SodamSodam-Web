@@ -194,11 +194,10 @@ header h2 {
   }
 }
 
-.chatbox {
-  overflow-y: scroll; /* 세로 스크롤 허용 */
-  max-height: 70vh; /* 스크롤 영역의 최대 높이 설정 */
-}
-
 .chatbot .chat-input {
   display: none !important; /* !important로 우선순위 높이기 */
+}
+
+.chatbox .incoming {
+  margin: 10px 0; /* 메시지 간격을 조절하는 부분 */
 }
