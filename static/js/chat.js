@@ -29,6 +29,31 @@ const createChatLi = (message, className) => {
   return chatLi; // 채팅 <li>요소 반환
 };
 
+
+// TTS 엔진 초기화
+const synth = window.speechSynthesis;
+
+// 환영 메시지 음성 출력 함수
+function greetUser() {
+  const welcomeMessage = "안녕하세요. 소담입니다. 무엇을 도와드릴까요?";
+  if (synth && welcomeMessage) {
+    const utterance = new SpeechSynthesisUtterance(welcomeMessage);
+    synth.speak(utterance);
+  }
+}
+
+// 페이지 로딩 후 환영 메시지 TTS 실행
+window.addEventListener("load", greetUser);
+
+// 서버 응답을 TTS로 읽어주는 함수
+function speakResponse(message) {
+  if (synth && message) {
+    const utterance = new SpeechSynthesisUtterance(message);
+    synth.speak(utterance);
+  }
+}
+
+
 const generateResponse = () => {
   const API_URL = "http://testdongho.kro.kr:5000/query";
 
@@ -51,14 +76,18 @@ const generateResponse = () => {
 
       const responseMessage = data.answer;
 
-      // 서버 응답에서 answer 메시지가 존재하는 경우에만 응답 메시지를 추가
       if (responseMessage) {
         const responseLi = createChatLi(responseMessage, "incoming");
         chatbox.appendChild(responseLi);
+
+        // 서버 응답을 TTS로 읽어줌
+        speakResponse(responseMessage);
       }
-      // 화면 스크롤 조정
+
       chatbox.scrollTo(0, chatbox.scrollHeight);
     });
+
+
   // .catch(() => {
   //   const errorLi = createChatLi("다시 입력해주세요.", "incoming error");
   //   chatbox.appendChild(errorLi);
