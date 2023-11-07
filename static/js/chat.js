@@ -11,10 +11,13 @@ const inputInitHeight = chatInput.scrollHeight;
 // 초기 화면 띄우기 함수
 function showChatbot() {
   document.body.classList.add("show-chatbot");
+  greetUser(); 
 }
+
 
 // 페이지 로딩 후 자동으로 초기 화면 띄우기
 window.addEventListener("load", showChatbot);
+
 
 const createChatLi = (message, className) => {
   // 받은 메세지랑 className가지고 채팅 <li> 요소 만들기
@@ -38,12 +41,21 @@ function greetUser() {
   const welcomeMessage = "안녕하세요. 소담입니다. 무엇을 도와드릴까요?";
   if (synth && welcomeMessage) {
     const utterance = new SpeechSynthesisUtterance(welcomeMessage);
+    utterance.rate = 1.8; // Adjust the rate to make it faster (e.g., 1.5 for 1.5x speed)
     synth.speak(utterance);
   }
 }
 
-// 페이지 로딩 후 환영 메시지 TTS 실행
-window.addEventListener("load", greetUser);
+// "네, 말씀하세요."라는 TTS 음성 메시지를 출력하는 함수
+function speakAskForInput() {
+  const message = "네, 말씀하세요.";
+  if (synth && message) {
+    const utterance = new SpeechSynthesisUtterance(message);
+    utterance.rate = 1.8; // Adjust the rate to make it faster (e.g., 1.5 for 1.5x speed)
+    synth.speak(utterance);
+  }
+}
+
 
 // 서버 응답을 TTS로 읽어주는 함수
 function speakResponse(message) {
@@ -156,4 +168,19 @@ document.body.addEventListener("touchstart", function (event) {
 chatbox.addEventListener("touchstart", function (event) {
   // .chatbox 내에서의 터치 이벤트를 처리
   // 스크롤을 허용하도록 할 수 있음
+});
+
+
+// 클릭 이벤트를 처리하는 이벤트 리스너
+document.body.addEventListener("click", () => {
+  // 클릭하면 음성 메시지 출력
+  speakAskForInput();
+  if (!recognition) {
+    // recognition이 초기화되지 않았으면 초기화
+    initializeSpeechRecognition();
+  }
+  const chatbox = document.querySelector(".chatbox");
+  if (!chatbox.contains(event.target)) {
+    event.preventDefault();
+  }
 });
