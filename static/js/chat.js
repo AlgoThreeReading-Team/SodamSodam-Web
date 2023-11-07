@@ -58,12 +58,12 @@ const generateResponse = () => {
       }
       // 화면 스크롤 조정
       chatbox.scrollTo(0, chatbox.scrollHeight);
-    })
-    .catch(() => {
-      const errorLi = createChatLi("다시 입력해주세요.", "incoming error");
-      chatbox.appendChild(errorLi);
-      chatbox.scrollTo(0, chatbox.scrollHeight);
     });
+  // .catch(() => {
+  //   const errorLi = createChatLi("다시 입력해주세요.", "incoming error");
+  //   chatbox.appendChild(errorLi);
+  //   chatbox.scrollTo(0, chatbox.scrollHeight);
+  // });
 };
 
 const handleChat = () => {
@@ -107,3 +107,24 @@ sendChatBtn.addEventListener("click", handleChat);
 
 // closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 // chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+document.body.addEventListener("touchstart", function (event) {
+  if (!recognition) {
+    // recognition이 초기화되지 않았으면 초기화
+    initializeSpeechRecognition();
+  }
+
+  const chatbox = document.querySelector(".chatbox");
+
+  if (event.target === document.getElementById("startButton")) {
+    event.stopPropagation();
+  } else if (!chatbox.contains(event.target)) {
+    // 터치 이벤트가 채팅 내용 외부에서는 무시
+    event.preventDefault();
+  }
+});
+
+chatbox.addEventListener("touchstart", function (event) {
+  // .chatbox 내에서의 터치 이벤트를 처리
+  // 스크롤을 허용하도록 할 수 있음
+});

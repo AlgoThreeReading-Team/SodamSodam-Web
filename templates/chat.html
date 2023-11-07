@@ -72,8 +72,10 @@
           initializeSpeechRecognition();
         }
 
-        // 음성 인식 시작
-        recognition.start();
+        if (recognition) {
+          // recognition이 초기화되어 있으면 음성 인식 시작
+          recognition.start();
+        }
       });
 
       // 터치 이벤트 핸들링
@@ -83,8 +85,10 @@
           initializeSpeechRecognition();
         }
 
-        // 음성 인식 시작
-        recognition.start();
+        if (recognition) {
+          // recognition이 초기화되어 있으면 음성 인식 시작
+          recognition.start();
+        }
       });
     </script>
     <!-- <button class="chatbot-toggler">
@@ -98,7 +102,7 @@
       </header>
       <ul class="chatbox">
         <li class="chat incoming">
-          <span class="material-symbols-outlined">로봇</span>
+          <span class="material-symbols-outlined">smart_toy</span>
           <p>안녕하세요. 소담입니다.<br />무엇을 도와드릴까요?</p>
         </li>
       </ul>
