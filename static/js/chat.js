@@ -4,6 +4,7 @@ const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
+let productId = null; // 상품 ID 저장하는 변수
 let userMessage = null; // 사용자 메시지 저장하는 변수
 const API_KEY = ""; // API키
 const inputInitHeight = chatInput.scrollHeight;
@@ -11,13 +12,11 @@ const inputInitHeight = chatInput.scrollHeight;
 // 초기 화면 띄우기 함수
 function showChatbot() {
   document.body.classList.add("show-chatbot");
-  greetUser(); 
+  greetUser();
 }
-
 
 // 페이지 로딩 후 자동으로 초기 화면 띄우기
 window.addEventListener("load", showChatbot);
-
 
 const createChatLi = (message, className) => {
   // 받은 메세지랑 className가지고 채팅 <li> 요소 만들기
@@ -31,7 +30,6 @@ const createChatLi = (message, className) => {
   chatLi.querySelector("p").textContent = message;
   return chatLi; // 채팅 <li>요소 반환
 };
-
 
 // TTS 엔진 초기화
 const synth = window.speechSynthesis;
@@ -47,7 +45,7 @@ function greetUser() {
 }
 
 function speakAskForInput() {
-  const message = "네, 네, 말씀하세요.";
+  const message = "네, 말씀하세요.";
 
   if (synth && message) {
     const chatbox = document.querySelector(".chatbox");
@@ -63,16 +61,14 @@ function speakAskForInput() {
   }
 }
 
-
 // 서버 응답을 TTS로 읽어주는 함수
 function speakResponse(message) {
   if (synth && message) {
     const utterance = new SpeechSynthesisUtterance(message);
-    utterance.rate = 1.7; 
+    utterance.rate = 1.7;
     synth.speak(utterance);
   }
 }
-
 
 const generateResponse = () => {
   const API_URL = "http://testdongho.kro.kr:5000/query";
@@ -85,6 +81,7 @@ const generateResponse = () => {
     },
     body: JSON.stringify({
       query: userMessage, // 사용자가 입력한 메시지를 보냅니다.
+      product_id: productId, // 상품 ID를 보냅니다.
     }),
   };
 
@@ -93,7 +90,7 @@ const generateResponse = () => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-
+      if (data.intent === "추천") productId = data.product_id;
       const responseMessage = data.answer;
 
       if (responseMessage) {
@@ -106,7 +103,6 @@ const generateResponse = () => {
 
       chatbox.scrollTo(0, chatbox.scrollHeight);
     });
-
 
   // .catch(() => {
   //   const errorLi = createChatLi("다시 입력해주세요.", "incoming error");
@@ -151,7 +147,6 @@ chatInput.addEventListener("keydown", (e) => {
   }
 });
 
-generateResponse();
 sendChatBtn.addEventListener("click", handleChat);
 
 // closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
@@ -178,7 +173,6 @@ chatbox.addEventListener("touchstart", function (event) {
   // 스크롤을 허용하도록 할 수 있음
 });
 
-
 // 클릭 이벤트를 처리하는 이벤트 리스너
 document.body.addEventListener("click", () => {
   // 클릭하면 음성 메시지 출력
@@ -192,4 +186,3 @@ document.body.addEventListener("click", () => {
     event.preventDefault();
   }
 });
-
