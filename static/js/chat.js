@@ -39,7 +39,7 @@ function greetUser() {
   const welcomeMessage = "안녕하세요. 소담입니다. 무엇을 도와드릴까요?";
   if (synth && welcomeMessage) {
     const utterance = new SpeechSynthesisUtterance(welcomeMessage);
-    utterance.rate = 1.8; // Adjust the rate to make it faster (e.g., 1.5 for 1.5x speed)
+    utterance.rate = 1.5; // Adjust the rate to make it faster (e.g., 1.5 for 1.5x speed)
     synth.speak(utterance);
   }
 }
@@ -56,7 +56,7 @@ function speakAskForInput() {
     chatbox.scrollTo(0, chatbox.scrollHeight);
 
     const utterance = new SpeechSynthesisUtterance(message);
-    utterance.rate = 1.8;
+    utterance.rate = 1.5;
     synth.speak(utterance);
   }
 }
@@ -65,13 +65,20 @@ function speakAskForInput() {
 function speakResponse(message) {
   if (synth && message) {
     const utterance = new SpeechSynthesisUtterance(message);
-    utterance.rate = 1.7;
+    utterance.rate = 1.5;
     synth.speak(utterance);
   }
 }
 
 const generateResponse = () => {
+  // "로딩중" 메시지 추가
+  const loadingLi = createChatLi("로딩중", "incoming");
+  chatbox.appendChild(loadingLi);
+  chatbox.scrollTo(0, chatbox.scrollHeight);
   const API_URL = "http://testdongho.kro.kr:5000/query";
+
+  // "로딩중" 메시지 TTS로 읽어주기
+  speakResponse("로딩 중");
 
   // API 요청에 대한 속성과 메세지 정의
   const requestOptions = {
