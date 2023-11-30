@@ -22,10 +22,7 @@ const createChatLi = (message, className) => {
   // 받은 메세지랑 className가지고 채팅 <li> 요소 만들기
   const chatLi = document.createElement("li");
   chatLi.classList.add("chat", `${className}`);
-  let chatContent =
-    className === "outgoing"
-      ? `<p></p>`
-      : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+  let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
   chatLi.innerHTML = chatContent;
   chatLi.querySelector("p").textContent = message;
   return chatLi; // 채팅 <li>요소 반환
@@ -75,7 +72,7 @@ const generateResponse = () => {
   const loadingLi = createChatLi("로딩중", "incoming");
   chatbox.appendChild(loadingLi);
   chatbox.scrollTo(0, chatbox.scrollHeight);
-  const API_URL = "http://testdongho.kro.kr:5000/query";
+  const API_URL = "http://localhost:5000/query";
 
   // "로딩중" 메시지 TTS로 읽어주기
   speakResponse("로딩 중");
@@ -96,8 +93,10 @@ const generateResponse = () => {
   fetch(API_URL, requestOptions)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
-      if (data.intent === "추천") productId = data.product_id;
+      console.log(data.productId);
+      if (data.product_id) {
+        productId = data.product_id;
+      }
       const responseMessage = data.answer;
 
       if (responseMessage) {
@@ -109,6 +108,9 @@ const generateResponse = () => {
       }
 
       chatbox.scrollTo(0, chatbox.scrollHeight);
+    })
+    .catch((error) => {
+      console.error("Error during fetch:", error);
     });
 
   // .catch(() => {
